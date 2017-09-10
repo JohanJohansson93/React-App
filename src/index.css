@@ -1,0 +1,131 @@
+*:focus {
+  outline: none;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+    color: rgba(0,0,0,0.87);
+
+}
+.bgimg{
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    min-height: 70%;
+}
+.searchDiv{
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+.typeahead {
+    border: 2px solid rgb(198, 16, 45);
+    border-radius: 8px 8px 8px 8px;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+    outline: medium none;
+    padding: 8px 12px;
+    width: 396px;
+}
+.tt-query,
+.tt-hint {
+    width: 396px;
+    height: 30px;
+    padding: 8px 12px;
+    font-size: 24px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+.tt-query {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+    color: rgba(0,0,0,0.87);
+
+}
+
+.tt-menu {
+    width: 420px;
+    margin-top: 4px;
+    padding: 4px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor,.tt-suggestion:hover {
+    color: #fff;
+    background-color: rgb(198,16,45);
+    cursor: pointer;
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+.contentarea{
+    background-color:white;
+    padding:50px 80px;
+    height: 400px;
+}
+.rightMainDiv{
+    width: 22%;
+    float: right;
+    margin-right: 25%;
+}
+.leftMainDiv{
+    width: 20%;
+    float: left;
+    margin-left: 31%;
+}
+.poster{
+    max-height: 400px;
+}
+.posterimg{
+    max-height: 400px;
+}
+.poster:after{
+    content: 'Expand';
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.poster:hover:after{
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.87);
+    transition: opcaity 200ms;
+}
+.lang, .budget, .release, .runtime, .votes{
+    font-weight: 600;
+}
+h1:hover{
+    color: rgb(198,16,45);
+    cursor: pointer;
+}
