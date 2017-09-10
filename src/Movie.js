@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
-let bgimg = this.props.data.poster;
 
 class Movie extends Component {
 
     componentDidUpdate() {
+
+        let bgimg = this.props.data.bgimg;
 
         if(bgimg === null){
             bgimg = './Images/theater-1713816_960_720.jpg';
