@@ -6,9 +6,8 @@ class Movie extends Component {
     componentDidUpdate() {
 
         let bgimg = this.props.data.bgimg;
-
         if(bgimg === null){
-            bgimg = './Images/theater-1713816_960_720.jpg';
+            bgimg = 'src/Images/theater-1713816_960_720.jpg';
             $('.bgimg').css('background-image', 'url("' + bgimg + '")');
         }else{
             bgimg = 'https://image.tmdb.org/t/p/w1000' + this.props.data.bgimg;
@@ -49,7 +48,7 @@ class Movie extends Component {
                     <p className="lang">Original Language: {language}</p>
                     <p className="release">Release Date: {release}</p>
                     <p className="runtime">Runtime: {runtime} min</p>
-                        <p className="budget">Budget: {budget} $</p>
+                        <p className="budget">Budget: ${budget}</p>
                     <p className="votes">Votes: {vote}</p>
                 </span>
                 </div>

@@ -8,8 +8,6 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: inherit;
-    color: rgba(0,0,0,0.87);
-
 }
 .bgimg{
   position: relative;
@@ -88,7 +86,8 @@ body, html {
     margin: 0;
 }
 .contentarea{
-    background-color:white;
+    background-color:ghostwhite;
+    color: black;
     padding:50px 80px;
     height: 400px;
 }
@@ -108,24 +107,9 @@ body, html {
 .posterimg{
     max-height: 400px;
 }
-.poster:after{
-    content: 'Expand';
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-.poster:hover:after{
-    cursor: pointer;
-    opacity: 1;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.87);
-    transition: opcaity 200ms;
-}
 .lang, .budget, .release, .runtime, .votes{
     font-weight: 600;
 }
-h1:hover{
+h1{
     color: rgb(198,16,45);
-    cursor: pointer;
 }
