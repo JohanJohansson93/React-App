@@ -4,15 +4,9 @@ import $ from 'jquery';
 class Movie extends Component {
 
     componentDidUpdate() {
-
-        let bgimg = this.props.data.bgimg;
-        if(bgimg === null){
-            bgimg = 'src/Images/theater-1713816_960_720.jpg';
-            $('.bgimg').css('background-image', 'url("' + bgimg + '")');
-        }else{
+            let bgimg;
             bgimg = 'https://image.tmdb.org/t/p/w1000' + this.props.data.bgimg;
             $('.bgimg').css('background-image', 'url("' + bgimg + '")');
-        }
     }
 
     render() {
