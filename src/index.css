@@ -103,13 +103,19 @@ body, html {
 }
 .poster{
     max-height: 400px;
+    width: 270px;
 }
 .posterimg{
     max-height: 400px;
 }
 .lang, .budget, .release, .runtime, .votes{
     font-weight: 600;
+    text-transform: uppercase;
 }
 h1{
     color: rgb(198,16,45);
+}
+h3{
+    color: rgb(198,16,45);
+
 }

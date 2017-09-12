@@ -4,9 +4,15 @@ import $ from 'jquery';
 class Movie extends Component {
 
     componentDidUpdate() {
+        if(this.props.data.bgimg === null){
+            let bgimg;
+            bgimg = 'https://image.tmdb.org/t/p/w1000' + this.props.data.poster;
+            $('.bgimg').css('background-image', 'url("' + bgimg + '")');
+        }else{
             let bgimg;
             bgimg = 'https://image.tmdb.org/t/p/w1000' + this.props.data.bgimg;
             $('.bgimg').css('background-image', 'url("' + bgimg + '")');
+        }
     }
 
     render() {
@@ -14,7 +20,6 @@ class Movie extends Component {
         let movieData = this.props.data;
 
         //Declares the data for every variable.
-
 
         let poster = 'https://image.tmdb.org/t/p/w500' + movieData.poster,
             title = movieData.originalTitle,
@@ -39,11 +44,13 @@ class Movie extends Component {
                     <h1>{title}</h1>
                     <span>
                     <p>{overview}</p>
-                    <p className="lang">Original Language: {language}</p>
-                    <p className="release">Release Date: {release}</p>
-                    <p className="runtime">Runtime: {runtime} min</p>
-                        <p className="budget">Budget: ${budget}</p>
-                    <p className="votes">Votes: {vote}</p>
+                        <span className="FactsTitles">
+                            <h3>Original Language:</h3><p className="lang">{language}</p>
+                            <h3>Release Date:</h3><p className="release">{release}</p>
+                            <h3>Runtime:</h3><p className="runtime">{runtime} min</p>
+                            <h3>Budget:</h3><p className="budget">${budget}</p>
+                            <h3>Vote Average:</h3><p className="votes">{vote}</p>
+                        </span>
                 </span>
                 </div>
                 <div className="leftMainDiv">
