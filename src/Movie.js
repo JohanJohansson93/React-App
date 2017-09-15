@@ -42,16 +42,18 @@ class Movie extends Component {
             <div className="contentarea">
                 <div className="rightMainDiv">
                     <h1>{title}</h1>
-                    <span>
-                    <p>{overview}</p>
-                        <span className="FactsTitles">
-                            <h3>Original Language:</h3><p className="lang">{language}</p>
-                            <h3>Release Date:</h3><p className="release">{release}</p>
-                            <h3>Runtime:</h3><p className="runtime">{runtime} min</p>
-                            <h3>Budget:</h3><p className="budget">${budget}</p>
-                            <h3>Vote Average:</h3><p className="votes">{vote}</p>
-                        </span>
-                </span>
+                    <div>
+                    <p className="overViewpar">{overview}</p>
+                </div>
+                    <div>
+                        <ol className="movieFacts">
+                            <li> <h3>Original Language:</h3><p className="lang">{language}</p> </li>
+                            <li> <h3>Release Date:</h3><p className="release">{release}</p> </li>
+                            <li> <h3>Runtime:</h3><p className="runtime">{runtime} min</p> </li>
+                            <li> <h3>Budget:</h3><p className="budget">${budget}</p> </li>
+                            <li> <h3>Average Vote:</h3><p className="votes">{vote}</p> </li>
+                        </ol>
+                    </div>
                 </div>
                 <div className="leftMainDiv">
                     <div className="poster">

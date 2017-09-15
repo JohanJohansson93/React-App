@@ -23,6 +23,7 @@ body, html {
     top: 25%;
     width: 100%;
     text-align: center;
+    z-index: 100;
 }
 .typeahead {
     border: 2px solid rgb(198, 16, 45);
@@ -86,20 +87,20 @@ body, html {
     margin: 0;
 }
 .contentarea{
-    background-color:ghostwhite;
+    background:rgba(255,255,255, 0.3);
     color: black;
     padding:50px 80px;
-    height: 400px;
+    height: 600px;
 }
 .rightMainDiv{
-    width: 22%;
+    width: 28%;
     float: right;
     margin-right: 25%;
 }
 .leftMainDiv{
     width: 20%;
     float: left;
-    margin-left: 31%;
+    margin-left: 25%;
 }
 .poster{
     max-height: 400px;
@@ -108,14 +109,43 @@ body, html {
 .posterimg{
     max-height: 400px;
 }
+.movieFacts{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    width: 47%;
+    text-align: left;
+    margin-right: 0;
+}
+.overViewpar{
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
 .lang, .budget, .release, .runtime, .votes{
     font-weight: 600;
     text-transform: uppercase;
 }
 h1{
-    color: rgb(198,16,45);
+    font-size: 2.1em;
+    font-weight: 700;
+    color: rgba(198,16,45,.8);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 h3{
+    font-size: 1.2em;
+    font-weight: 600;
     color: rgb(198,16,45);
 
+}
+@media screen and (max-width: 1024px){
+    .rightMainDiv{
+        margin-right: 20%;
+    }
+    .leftMainDiv{
+        margin-left: 15%;
+    }
 }
