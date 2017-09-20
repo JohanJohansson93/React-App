@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 
+/*
+    A class that retrieves data from component App and visualize the data to the user.
+ */
 class Movie extends Component {
-
+    /*
+        If the component updates this method invokes.
+        It control the bgimg variable and if bgimg is null then it sets the value to the
+     */
     componentDidUpdate() {
         if(this.props.data.bgimg === null){
             let bgimg;

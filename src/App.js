@@ -6,7 +6,9 @@ import $ from 'jquery';
 import 'typeahead.js'
 import 'jquery'
 
-
+/*
+    A class that handles the logic from fetching the data from the api and initializing the Bloodhound effect.
+ */
 class App extends Component {
 
     constructor(props) {
@@ -16,7 +18,11 @@ class App extends Component {
             movieID: 330459 //Intitial movieID
         }
     }
-
+    /*
+        This method is invoked if a update occur.
+        It make a call to the fetchFromApi method with the url as parameter.
+         It creates and initialize the Bloodhound effect.
+     */
     componentDidMount() {
         let apiurl = 'https://api.themoviedb.org/3/movie/' + this.state.movieID + '?&api_key=aa1dd3630520bcf97a5459e1a7f3ef58';
         this.fetchFromApi(apiurl);
@@ -45,7 +51,7 @@ class App extends Component {
 
         /*
             JQuery starts here.
-            Creates the Bloodhound typeahead effect.
+            Sets up the typeahead effect.
         */
 
         $('.typeahead').typeahead({
@@ -57,7 +63,9 @@ class App extends Component {
             source: movies.ttAdapter()
         }).on('typeahead:selected', function (obj, datum) {
             this.fetchMovieID(datum.id)
-        }.bind(this));
+        }.bind(this)).on('typeahead:close', function () {
+            $(this).val("");
+        });
     }
 
     //Fetches data from the themoviedb api.
@@ -79,7 +87,7 @@ class App extends Component {
         })
     }
 
-
+    //Fetches the movie.
     fetchMovieID(movieID) {
         let apiurl = 'https://api.themoviedb.org/3/movie/' + movieID + '?&api_key=aa1dd3630520bcf97a5459e1a7f3ef58';
         this.fetchFromApi(apiurl)
