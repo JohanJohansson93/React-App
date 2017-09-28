@@ -24,7 +24,7 @@ class App extends Component {
          It creates and initialize the Bloodhound effect.
      */
     componentDidMount() {
-        let apiurl = 'https://api.themoviedb.org/3/movie/' + this.state.movieID + '?&api_key=aa1dd3630520bcf97a5459e1a7f3ef58';
+        let apiurl = 'https://api.themoviedb.org/3/movie/' + this.state.movieID + '';
         this.fetchFromApi(apiurl);
 
         let movies = new Bloodhound({
@@ -33,7 +33,7 @@ class App extends Component {
             },
             queryTokenizer: Bloodhound.tokenizers.whitespace,
             remote: {
-                url: 'https://api.themoviedb.org/3/search/movie?query=%QUERY&api_key=aa1dd3630520bcf97a5459e1a7f3ef58',
+                url: 'https://api.themoviedb.org/3/search/movie?query=%QUERY&',
                 wildcard: '%QUERY',
                 filter: function (movies) {
 
@@ -89,7 +89,7 @@ class App extends Component {
 
     //Fetches the movie.
     fetchMovieID(movieID) {
-        let apiurl = 'https://api.themoviedb.org/3/movie/' + movieID + '?&api_key=aa1dd3630520bcf97a5459e1a7f3ef58';
+        let apiurl = 'https://api.themoviedb.org/3/movie/' + movieID + '?&';
         this.fetchFromApi(apiurl)
     }
 
